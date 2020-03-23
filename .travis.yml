@@ -19,12 +19,5 @@ before_install:
 
 install:
   - docker-compose -f deployment/docker/docker-compose-build.yaml build --parallel 
-
-before_deploy:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-
-deploy:
-  provider: script
-  script: docker-compose push
-  on:
-    branch: master
+  - docker-compose push
