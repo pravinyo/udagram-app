@@ -1,4 +1,4 @@
-# udagram Simple Cloud base App
+## udagram Simple Cloud base App  [![Build Status](https://travis-ci.com/pravinyo/udagram-app.svg?branch=master)](https://travis-ci.com/pravinyo/udagram-app)
 Developed as a part of Cloud Developer Nanodegree  with Udacity.
 
 Key Components:
