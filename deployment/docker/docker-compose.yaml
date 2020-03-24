@@ -11,7 +11,7 @@ services:
   backend-image-filter:
     image: pravinyo/udagram-restapi-image-filter
   backend-user:
-    image: pravinyo/udagram-restapi-user:all_access
+    image: pravinyo/udagram-restapi-user:v2
     volumes:
       - $HOME/.aws:/root/.aws
     environment:
@@ -25,7 +25,7 @@ services:
       JWT_SECRET: $JWT_SECRET
       URL: "http://localhost:8100"
   backend-feed:
-    image: pravinyo/udagram-restapi-feed:all_access
+    image: pravinyo/udagram-restapi-feed:v2
     volumes:
       - $HOME/.aws:/root/.aws
     environment:
