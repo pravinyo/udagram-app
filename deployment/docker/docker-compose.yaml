@@ -1,7 +1,7 @@
 version: "3"
 services:
   reverseproxy:
-      image: pravinyo/udagram-reverseproxy
+      image: pravinyo/udagram-reverseproxy:v2
       ports:
           - 8080:8080
       restart: always
@@ -9,7 +9,7 @@ services:
         - backend-user
         - backend-feed    
   backend-image-filter:
-    image: pravinyo/udagram-restapi-image-filter:v1
+    image: pravinyo/udagram-restapi-image-filter
   backend-user:
     image: pravinyo/udagram-restapi-user:all_access
     volumes:
