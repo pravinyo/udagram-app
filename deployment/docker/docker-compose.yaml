@@ -7,7 +7,9 @@ services:
       restart: always
       depends_on:
         - backend-user
-        - backend-feed     
+        - backend-feed    
+  backend-image-filter:
+    image: pravinyo/udagram-restapi-image-filter:v1
   backend-user:
     image: pravinyo/udagram-restapi-user:all_access
     volumes:
@@ -36,6 +38,8 @@ services:
       AWS_MEDIA_BUCKET: $AWS_MEDIA_BUCKET
       JWT_SECRET: $JWT_SECRET
       URL: "http://localhost:8100"
+    depends_on:
+      - backend-image-filter
   frontend:
     image: pravinyo/udagram-frontend
     ports:
