@@ -10,6 +10,9 @@ Key Components:
  
  - Backend REST API for Feed Service:
  `Built using Nodejs, Typescript, docker-container, AWS Postgress,S3 Buckert for media, sequalize`
+
+ - Backend REST API for Image Filter Service:
+ `Built using Nodejs, Typescript, docker-container, S3 Buckert for media`
  
  - Deployment Component:
     - `It dockerizes the component and host on docker hub`</li>
