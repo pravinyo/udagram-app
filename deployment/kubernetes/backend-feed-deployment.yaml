@@ -15,7 +15,7 @@ spec:
         app: backend-feed
     spec:
       containers:
-      - image: pravinyo/udagram-restapi-feed:all_access
+      - image: pravinyo/udagram-restapi-feed:v2
         name: backend-feed
         imagePullPolicy: Always  
         resources:
