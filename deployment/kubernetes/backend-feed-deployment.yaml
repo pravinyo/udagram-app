@@ -26,7 +26,7 @@ spec:
             memory: "1024Mi"
             cpu: "500m"    
         ports:
-          - containerPort: 8081                  
+          - containerPort: 8080                  
         env:
         - name: URL
           valueFrom:
