@@ -8,7 +8,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   const app = express();
 
   // Set the network port
-  const port = process.env.PORT || 8081;
+  const port = process.env.PORT || 8080;
 
   const userFilesTracker= new Map<string,string[]>();
   
