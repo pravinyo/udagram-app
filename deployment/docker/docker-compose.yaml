@@ -9,7 +9,7 @@ services:
         - backend-user
         - backend-feed    
   backend-image-filter:
-    image: pravinyo/udagram-restapi-image-filter:v1
+    image: pravinyo/udagram-restapi-image-filter:v2
   backend-user:
     image: pravinyo/udagram-restapi-user:v2
     volumes:
