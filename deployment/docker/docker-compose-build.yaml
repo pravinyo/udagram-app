@@ -15,7 +15,7 @@ services:
   backend_image_filter:
     build:
       context: ../../backend/restapi-image-filter
-    image: pravinyo/udagram-restapi-image-filter:v1
+    image: pravinyo/udagram-restapi-image-filter:v2
   frontend:
     build:
       context: ../../frontend  

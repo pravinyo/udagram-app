@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-image-filter
+  labels:
+    app: backend-image-filter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend-image-filter
+  template:
+    metadata:
+      labels:
+        app: backend-image-filter
+    spec:
+      containers:
+      - image: pravinyo/udagram-restapi-image-filter:v2
+        name: backend-image-filter
+        imagePullPolicy: Always  
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"    
+        ports:
+          - containerPort: 8080                  
+        env:
+        - name: URL
+          valueFrom:
+            configMapKeyRef:
+              name: env-config
+              key: URL
+      restartPolicy: Always
+      volumes:
+      - name: aws-secret
+        secret:
+          secretName: aws-secret       
