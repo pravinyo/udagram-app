@@ -3,11 +3,11 @@ kind: Service
 metadata:
   name: backend-image-filter
   labels:
-    service: backend-image-filter
+    app: backend-image-filter
 spec:
   ports:
   - name: "8080"
     port: 8080
     targetPort: 8080
   selector:
-    service: backend-image-filter
+    app: backend-image-filter
