@@ -3,13 +3,13 @@ kind: Service
 metadata:
   name: frontend
   labels:
-    service: frontend
+    app: frontend
 spec:
   ports:
   - name: "8100"
     port: 8100
     targetPort: 80
   selector:
-    service: frontend
-  type: NodePort  
+    app: frontend
+#  type: NodePort  
  
