@@ -19,3 +19,6 @@ Key Components:
     - `Kubernetes pull the images from registry and host the container application as pod on clustor in AWS`
  
  
+## Additional Details:
+- Docker Hub: https://hub.docker.com/repository/docker/pravinyo/
+- Travis : https://travis-ci.com/github/pravinyo/udagram-app
