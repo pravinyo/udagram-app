@@ -13,8 +13,26 @@ It takes UserId as url paramter which used to delete all the tracking data and r
 
 ## How to use it
 To delete the files, this is how our url looks like
-```http://{{HOST_NAME}}/deleteAll?user_id={{ID}}```
+```http://{{HOST_NAME}}/api/v0/imagefilter/deleteAll?user_id={{ID}}```
 
 To make request for image processing:
-```http://{{HOST_NAME}}/filteredimage?user_id={{ID}}&image_url={{URL}}```
+```http://{{HOST_NAME}}/api/v0/imagefilter/image?user_id={{ID}}&image_url={{URL}}```
 
+## Tech stack:
+- Nodejs
+- TypeScript
+- Docker
+- EC2
+
+## How to setup and run:
+- Download necessary dependencies for the component: `Run-> npm install`
+- Now, Our dependencies are available. It time to run the app and checkout in browser: `Run-> npm run dev`
+- Now, Open browser and type: `localhost:8080/api/v0/imagefilter/image/<endpoint>`
+- Now, you are ready to use this service to authenticate your users.
+
+## How to deploy to DockerHub
+- Once, you're sure component is working fine locally, you can push it to hub
+- Login with docker locally by providing username and password: `Run -> docker login`
+- Build Image: `Run -> docker build -t <repository>/<Image Name>:<Tag>`
+- Push to Hub: `Run-> docker push <repository>/<Image name>:<tag>`
+- Congrats, you have successfully published you image to hub.

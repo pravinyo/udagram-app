@@ -2,7 +2,7 @@
 Developed as a part of Cloud Developer Nanodegree  with Udacity.
 
 Key Components:
-- FrontEnd Component:
+- Frontend Component:
  `Built using Typescript, Nodejs and Ionic, Cloudfront, docker-container`
  
  - Backend REST API for User Service:
