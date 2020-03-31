@@ -15,7 +15,7 @@ spec:
         app: backend-user
     spec:
       containers:
-      - image: pravinyo/udagram-restapi-user:all_access
+      - image: pravinyo/udagram-restapi-user:v2
         name: backend-user 
         imagePullPolicy: Always  
         resources:
@@ -26,7 +26,7 @@ spec:
             memory: "1024Mi"
             cpu: "500m"      
         ports:
-          - containerPort: 8081
+          - containerPort: 8080
         env:
         - name: URL
           valueFrom:

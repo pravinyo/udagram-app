@@ -1,15 +1,17 @@
 version: "3"
 services:
   reverseproxy:
-      image: pravinyo/udagram-reverseproxy
+      image: pravinyo/udagram-reverseproxy:v2
       ports:
           - 8080:8080
       restart: always
       depends_on:
         - backend-user
-        - backend-feed     
+        - backend-feed    
+  backend-image-filter:
+    image: pravinyo/udagram-restapi-image-filter:v2
   backend-user:
-    image: pravinyo/udagram-restapi-user:all_access
+    image: pravinyo/udagram-restapi-user:v2
     volumes:
       - $HOME/.aws:/root/.aws
     environment:
@@ -23,7 +25,7 @@ services:
       JWT_SECRET: $JWT_SECRET
       URL: "http://localhost:8100"
   backend-feed:
-    image: pravinyo/udagram-restapi-feed:all_access
+    image: pravinyo/udagram-restapi-feed:v2
     volumes:
       - $HOME/.aws:/root/.aws
     environment:
@@ -36,6 +38,8 @@ services:
       AWS_MEDIA_BUCKET: $AWS_MEDIA_BUCKET
       JWT_SECRET: $JWT_SECRET
       URL: "http://localhost:8100"
+    depends_on:
+      - backend-image-filter
   frontend:
     image: pravinyo/udagram-frontend
     ports:

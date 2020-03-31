@@ -15,7 +15,7 @@ spec:
         app: backend-feed
     spec:
       containers:
-      - image: pravinyo/udagram-restapi-feed:all_access
+      - image: pravinyo/udagram-restapi-feed:v2
         name: backend-feed
         imagePullPolicy: Always  
         resources:
@@ -26,7 +26,7 @@ spec:
             memory: "1024Mi"
             cpu: "500m"    
         ports:
-          - containerPort: 8081                  
+          - containerPort: 8080                  
         env:
         - name: URL
           valueFrom:
