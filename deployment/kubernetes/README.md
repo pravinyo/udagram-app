@@ -4,6 +4,7 @@ It is used to deploy application in kubernetes(K8s) cluster environment. K8s all
 ## Steps to locally setup cluster and run Udagram Application:
 - Start the cluster: 
 `` Here we are using minikube to locally simulate Single K8s Cluster. Run -> **minikube start**``
+- Load secrets and configMap. `Run-> kubectl apply -f <secrets.yaml/configMap.yaml>`
 - Load the container as Pod in Node:
     - Kubectl apply -f backend-`service_name`-deployment.yaml
     - Check status: `kubectl get pods`
